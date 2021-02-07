@@ -1,0 +1,33 @@
+:root {
+  --active: #70f743;
+  --primary: #93ff91;
+  --secondary: #8a8a8a;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+body {
+  background-color: var(--secondary);
+}
+
+header .navbar{
+  background-color: var(--dark);
+}
+
+a {color: var(--primary);}
+a:hover {color: var(--active);}
+
+.dropdown-menu {
+  background-color: var(--secondary);
+}
+.dropdown-menu a {
+  color: var(--light);
+}
+.dropdown-menu a:hover {
+  color: var(--dark);
+  background-color: var(--primary);
+}
