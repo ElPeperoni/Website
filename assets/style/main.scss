@@ -1,0 +1,73 @@
+
+@import 'defaults';
+
+@mixin size($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    @include size(100%, 100%);
+    overflow: hidden;
+    display: flex;
+    background: color(secondary)
+
+}
+
+@import 'loading';
+@import 'nav';
+
+main {
+    @include size(100%, 80%);
+    display: flex;
+
+    direction: column;
+    
+    flex-wrap: wrap;
+    right: 0%;
+    top:0%;
+    overflow: hidden;
+    background: linear-gradient(90deg, color(secondary) 0%, color(secondary-light) 50%, color(secondary) 100%);
+
+    .page {
+        @include size(100%, 100%);
+        position: relative; 
+        background-color: hidden;
+        z-index: 0;
+        display: none;
+        justify-content: center;
+        direction: column;
+        flex-wrap: wrap;
+        color: color(focus-dark);
+        .container {
+            @include size(200px, 200px);
+
+            img{
+                @include size(100%, 100%);
+                object-fit: cover;
+            }
+        }
+
+            
+        div.bg {
+            @include size(5%, 80%);
+            @each $name, $color in $colors {
+            &##{$name} {
+                    
+                    background: $color;
+                }
+            }
+        } 
+    }
+    .active {
+        display: flex;
+    }
+}

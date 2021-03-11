@@ -1,0 +1,27 @@
+.loading {
+    @include size(100%, 100%);
+    position: absolute;
+    z-index: 99;
+    background-color: color(focus-dark);
+
+    display: flex;
+    justify-content: center;
+    direction: column;
+    flex-wrap: wrap;
+
+    svg {
+        @include size(50%, 80%);
+        margin: auto;
+
+        g {
+            opacity: 0;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        top: 80%;
+        font-size: 200%;
+        color: color(focus-light);
+    }
+}

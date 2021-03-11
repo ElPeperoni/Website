@@ -42,7 +42,7 @@ func main() {
 	http.HandleFunc("/parse", parseHTML)
 	http.HandleFunc("/base", base)
 
-	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
 
 	log.Fatal(http.ListenAndServe(*listen, nil))
 }

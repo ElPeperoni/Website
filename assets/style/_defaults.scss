@@ -1,0 +1,18 @@
+$colors: (
+    primary: #363636,
+    primary-light: lighten(#363636, 40%),
+    primary-dark: darken(#363636, 40%),
+    secondary: #ABABAB,
+    secondary-light: lighten(#ABABAB, 40%),
+    secondary-dark: darken(#ABABAB, 40%),
+    focus: #119AF9,
+    focus-light: lighten(#119AF9, 40%),
+    focus-dark: darken(#119AF9, 40%),
+    active: #56EE2D,
+    active-light: lighten(#56EE2D, 40%),
+    active-dark: darken(#56EE2D, 40%),
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
