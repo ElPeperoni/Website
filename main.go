@@ -67,9 +67,9 @@ func todo(w http.ResponseWriter, r *http.Request) {
 	data := TodoPageData{
 		PageTitle: "My TODO list",
 		Todos: []Todo{
-			{Title: "Task 1", Done: false},
-			{Title: "Task 2", Done: true},
-			{Title: "Task 3", Done: true},
+			{Title: "Task 1: Load and show Data", Done: false},
+			{Title: "Task 2: Create abd visualize Agent", Done: false},
+			{Title: "Task 3: Make it work!", Done: false},
 		},
 	}
 	tmpl.Execute(w, data)
